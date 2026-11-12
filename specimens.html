@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Specimens — Nine Bots | Bot Wiki</title>
+<!-- seo -->
+<meta name="description" content="The specimen drawer: filter nine bots by status, open any card as a dissection of its BOT.md with mission, loop and armed hold points.">
+<link rel="canonical" href="https://pukujan.github.io/bot-wiki/specimens.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bot Wiki">
+<meta property="og:title" content="Specimens — Nine Bots | Bot Wiki">
+<meta property="og:description" content="The specimen drawer: filter nine bots by status, open any card as a dissection of its BOT.md with mission, loop and armed hold points.">
+<meta property="og:url" content="https://pukujan.github.io/bot-wiki/specimens.html">
+<meta property="og:image" content="https://pukujan.github.io/bot-wiki/img/share-2b4018e64d.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A technical lab bench seen from above with a bone-paper notebook, calipers, glass slides and a small orange tag">
+<meta property="og:image" content="https://pukujan.github.io/bot-wiki/img/share-2b4018e64d-sq.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Specimens — Nine Bots | Bot Wiki">
+<meta name="twitter:description" content="The specimen drawer: filter nine bots by status, open any card as a dissection of its BOT.md with mission, loop and armed hold points.">
+<meta name="twitter:image" content="https://pukujan.github.io/bot-wiki/img/share-2b4018e64d.jpg">
+<meta name="twitter:image:alt" content="A technical lab bench seen from above with a bone-paper notebook, calipers, glass slides and a small orange tag">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FF5A1F">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Specimens — Nine Bots | Bot Wiki","description":"The specimen drawer: filter nine bots by status, open any card as a dissection of its BOT.md with mission, loop and armed hold points.","url":"https://pukujan.github.io/bot-wiki/specimens.html","image":"https://pukujan.github.io/bot-wiki/img/share-2b4018e64d.jpg","isPartOf":{"@type":"WebSite","name":"Bot Wiki","url":"https://pukujan.github.io/bot-wiki/","inLanguage":"en"}}</script>
+<!-- /seo -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --background: #131210;
+  --foreground: #F2EDE2;
+  --primary: #FF5A1F;
+  --primary-foreground: #131210;
+  --muted: #1F1D19;
+  --muted-foreground: #9C9587;
+  --border: #332F28;
+  --accent: #E8DFC9;
+  --card: #1A1815;
+  --font-heading: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --radius: 8px;
+}
+html, body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); }
+
+[data-goto],button,a[href]{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+[data-goto]:hover,button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.m-t{opacity:0;transform:translateY(var(--m-rise)) scale(var(--m-scale));transition:opacity var(--m-ms) var(--m-ease),transform var(--m-ms) var(--m-ease);transition-delay:var(--m-delay,0ms)}
+img.m-t{transform:scale(1.06)}
+.m-t.m-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.m-t{opacity:1;transform:none;transition:none}[data-goto]:hover,button:hover{transform:none}}
+</style>
+</head>
+<body>
+<!-- navigation -->
+<!-- say: starting the shared navigation layer -->
+<nav class="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--background)]/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+
+    <!-- say: brand plus monospace build tag -->
+    <div class="flex items-center justify-between gap-4 sm:justify-start">
+      <a href="#" data-goto="overview" class="flex items-center gap-2.5 rounded-[var(--radius)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] text-[var(--accent)]" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+            <rect x="4" y="8" width="16" height="11" rx="2"></rect>
+            <path d="M12 8V4"></path>
+            <circle cx="12" cy="3" r="1"></circle>
+            <path d="M9 13h.01M15 13h.01"></path>
+            <path d="M2 12v3M22 12v3"></path>
+          </svg>
+        </span>
+        <span class="text-base font-medium text-[var(--foreground)]" style="font-family:var(--font-heading)">Bot Wiki</span>
+        <span class="hidden whitespace-nowrap rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-1.5 py-0.5 font-mono text-[11px] tracking-tight text-[var(--muted-foreground)] sm:inline">v0.9.4</span>
+      </a>
+      <span class="whitespace-nowrap rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-1.5 py-0.5 font-mono text-[11px] tracking-tight text-[var(--muted-foreground)] sm:hidden">v0.9.4</span>
+    </div>
+
+    <!-- say: primary links as compact UI tabs -->
+    <ul class="flex flex-wrap items-center gap-x-1 gap-y-1 text-sm">
+      <li>
+        <a href="#" data-goto="overview" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Overview</a>
+      </li>
+      <li>
+        <a href="#" data-goto="apparatus" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Apparatus</a>
+      </li>
+      <li>
+        <a href="#" data-goto="specimens" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Specimens</a>
+      </li>
+      <li>
+        <a href="#" data-goto="safety" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Safety</a>
+      </li>
+      <li>
+        <a href="#" data-goto="results" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Results</a>
+      </li>
+    </ul>
+
+    <!-- say: single CTA back into the wiki -->
+    <a href="#" data-goto="overview" class="inline-flex items-center justify-center gap-2 self-start rounded-[var(--radius)] bg-[var(--primary)] px-4 py-2 text-sm font-medium text-[var(--primary-foreground)] transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] sm:self-auto">
+      Read the wiki
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+
+  </div>
+</nav>
+<!-- say: nav done — build tag, tabs, one CTA -->
+
+<!-- filter-bar -->
+<section class="max-w-6xl mx-auto px-6 pt-12 pb-8">
+  <!-- say: Opening the specimen drawer with the page's single h1. -->
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-wrap items-baseline justify-between gap-3 border-b border-[var(--border)] pb-4">
+      <p class="font-mono text-xs tracking-[0.2em] uppercase text-[var(--muted-foreground)]">Specimen Drawer</p>
+      <p class="font-mono text-xs tracking-[0.2em] uppercase text-[var(--accent)]">9 bots on file</p>
+    </div>
+
+    <h1 style="font-family:var(--font-heading)" class="text-3xl sm:text-4xl leading-tight text-[var(--foreground)]">
+      Specimens — Nine Bots
+    </h1>
+
+    <!-- say: Status tally strip reads like a lab counter. -->
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-px bg-[var(--border)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden text-sm">
+      <div class="bg-[var(--card)] px-4 py-3">
+        <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Status</p>
+        <p class="mt-1 font-medium text-[var(--foreground)]">All 9</p>
+      </div>
+      <div class="bg-[var(--card)] px-4 py-3">
+        <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Live</p>
+        <p class="mt-1 font-medium text-[var(--foreground)]">1</p>
+      </div>
+      <div class="bg-[var(--card)] px-4 py-3">
+        <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Seeding</p>
+        <p class="mt-1 font-medium text-[var(--foreground)]">2</p>
+      </div>
+      <div class="bg-[var(--card)] px-4 py-3">
+        <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Paused</p>
+        <p class="mt-1 font-medium text-[var(--foreground)]">5</p>
+      </div>
+      <div class="bg-[var(--card)] px-4 py-3">
+        <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Blocked</p>
+        <p class="mt-1 font-medium text-[var(--foreground)]">1</p>
+      </div>
+    </div>
+
+    <!-- say: Search and sort controls, real form fields. -->
+    <div class="flex flex-col md:flex-row md:items-end gap-4">
+      <div class="flex-1 min-w-0">
+        <label for="specimen-search" class="block font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)] mb-1.5">Search callsign</label>
+        <div class="flex items-center gap-2 border border-[var(--border)] bg-[var(--background)] rounded-[var(--radius)] px-3 py-2">
+          <svg class="w-4 h-4 shrink-0 text-[var(--muted-foreground)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <line x1="16" y1="16" x2="21" y2="21"></line>
+          </svg>
+          <input id="specimen-search" type="search" placeholder='try "Binder" or "Mesh"' class="w-full bg-transparent text-sm text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] focus:outline-none" />
+        </div>
+      </div>
+      <div class="md:w-64">
+        <label for="specimen-sort" class="block font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--muted-foreground)] mb-1.5">Sort</label>
+        <select id="specimen-sort" class="w-full text-sm bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-2 focus:outline-none focus:border-[var(--accent)]">
+          <option>Plate number</option>
+          <option>Callsign A–Z</option>
+          <option>Last run</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- say: Live readout, the one orange signal. -->
+    <div class="flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-[var(--muted-foreground)]">
+      <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+      <span>Readout: <span class="text-[var(--accent)]">1 LIVE</span> · 8 ON THE BENCH</span>
+    </div>
+  </div>
+</section>
+
+<!-- specimen-plates -->
+<!-- I'll build a specimen drawer grid of nine plates -->
+<section class="w-full bg-[var(--background)] text-[var(--foreground)]">
+  <div class="max-w-6xl mx-auto px-6 py-14 sm:py-20">
+
+    <!-- Intro block for the plate drawer -->
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-[var(--accent)]" style="font-family:var(--font-body)">Fig. 2</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl leading-tight" style="font-family:var(--font-heading)">Specimen plates, drawer 01–09</h2>
+      <p class="mt-4 text-sm sm:text-base text-[var(--muted-foreground)]" style="font-family:var(--font-body)">
+        Each bot is a numbered gouache plate with exposed joints and cable runs; joints turn a few degrees as you scroll.
+      </p>
+    </div>
+
+    <!-- Instruction line, sits below intro in normal flow -->
+    <p class="mt-4 inline-flex items-center gap-2 text-xs sm:text-sm text-[var(--muted-foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 bg-[var(--card)]" style="font-family:var(--font-body)">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" class="shrink-0">
+        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+        <path d="M7 6v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+        <circle cx="7" cy="4" r="0.9" fill="currentColor"></circle>
+      </svg>
+      Click any plate to open its BOT.md.
+    </p>
+
+    <!-- Nine specimen plates, three-up at desktop, one-up on mobile -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Specimen 01 · Klerik — live -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 01</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--primary-foreground)]" aria-hidden="true"></span>live
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Klerik</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">owns the method</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 02 · Cutroom -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 02</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true"></span>seeding
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Cutroom</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">voice chat becomes video</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 03 · Binder -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 03</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true"></span>seeding
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Binder</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">card-shop inventory</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 04 · TurboSouth — paused -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 04</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--muted-foreground)]" aria-hidden="true"></span>paused
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">TurboSouth</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">TurboFit support</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 05 · Apex -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 05</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--muted-foreground)]" aria-hidden="true"></span>paused
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Apex</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Nous Racers kart game</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 06 · Riff -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 06</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--muted-foreground)]" aria-hidden="true"></span>paused
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Riff</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">DAW plugin</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 07 · Anser -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 07</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--muted-foreground)]" aria-hidden="true"></span>paused
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Anser</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">answers with citations</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 08 · Mesh -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 08</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--muted-foreground)]" aria-hidden="true"></span>paused
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Mesh</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Hermes on every device</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+      <!-- Specimen 09 · Beacon — blocked -->
+      <article class="group flex flex-col bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-xs uppercase tracking-[0.14em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Specimen 09</span>
+          <span class="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-[var(--radius)] bg-[var(--muted)] text-[var(--foreground)]" style="font-family:var(--font-body)">
+            <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true"></span>blocked
+          </span>
+        </div>
+        <h3 class="mt-3 text-2xl" style="font-family:var(--font-heading)">Beacon</h3>
+        <p class="mt-1 text-sm text-[var(--muted-foreground)]" style="font-family:var(--font-body)">benefits paperwork</p>
+        <button type="button" class="mt-5 inline-flex items-center gap-1.5 self-start text-xs sm:text-sm text-[var(--foreground)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 hover:border-[var(--accent)] transition-colors" style="font-family:var(--font-body)">
+          Open BOT.md
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- dissection-panel -->
+<!-- I'm building the dissection panel for the specimens page -->
+<section class="bg-[var(--background)] px-6 py-16">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-baseline justify-between gap-4 flex-wrap mb-8">
+      <h2 class="text-3xl md:text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">Dissection</h2>
+      <span class="text-sm text-[var(--muted-foreground)] font-mono">bots/binder/BOT.md</span>
+    </div>
+
+    <!-- Two-column workstation: index on the left, the open specimen on the right -->
+    <div class="grid md:grid-cols-[1fr_2fr] gap-6 items-start">
+
+      <!-- Specimen switcher -->
+      <nav aria-label="Switch specimen" class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-4">
+        <p class="text-sm font-mono text-[var(--muted-foreground)] mb-3">Switch specimen</p>
+        <ul class="grid grid-cols-2 md:grid-cols-1 gap-1 text-sm font-mono">
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">01</span> Klerik</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">02</span> Cutroom</a></li>
+          <li><a href="#" data-goto="specimens" aria-current="true" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)]"><span class="opacity-70">03</span> Binder</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">04</span> TurboSouth</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">05</span> Apex</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">06</span> Riff</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">07</span> Anser</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">08</span> Mesh</a></li>
+          <li><a href="#" data-goto="specimens" class="flex items-center gap-2 px-2 py-1.5 rounded-[var(--radius)] text-[var(--foreground)] hover:bg-[var(--muted)]"><span class="text-[var(--muted-foreground)]">09</span> Beacon</a></li>
+        </ul>
+      </nav>
+
+      <!-- Open specimen: the dissection -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-6 md:p-8">
+        <!-- Mission block -->
+        <div class="mb-6">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-[var(--muted-foreground)] mb-2">Mission</h3>
+          <p class="text-base text-[var(--foreground)] leading-relaxed">keep the card-shop inventory true — counts, conditions, prices, and what left the shelf.</p>
+        </div>
+
+        <!-- Loop block -->
+        <div class="mb-6">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-[var(--muted-foreground)] mb-2">Loop</h3>
+          <ol class="text-base text-[var(--foreground)] leading-relaxed space-y-1 list-decimal list-inside marker:text-[var(--muted-foreground)]">
+            <li>read the intake note,</li>
+            <li>reconcile against the shelf count,</li>
+            <li>write the delta to the queue,</li>
+            <li>wait for the next note.</li>
+          </ol>
+        </div>
+
+        <!-- Hold points -->
+        <div class="mb-6 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+            <h3 class="text-xs font-mono uppercase tracking-widest text-[var(--foreground)]">Hold points armed</h3>
+          </div>
+          <ul class="flex flex-wrap gap-2 text-sm font-mono">
+            <li class="px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)]">spend money</li>
+            <li class="px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)]">publish in your name</li>
+            <li class="px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)]">submit a form</li>
+            <li class="px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)]">delete data</li>
+          </ul>
+          <p class="text-sm text-[var(--muted-foreground)] mt-3">Every hold point trips to a human before the step runs.</p>
+        </div>
+
+        <!-- Files read -->
+        <div>
+          <h3 class="text-xs font-mono uppercase tracking-widest text-[var(--muted-foreground)] mb-2">Files this bot reads</h3>
+          <ul class="text-sm font-mono text-[var(--foreground)] space-y-1">
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)]">▸</span> BOT.md</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)]">▸</span> .system/</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)]">▸</span> skills/inventory-check/SKILL.md</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)]">▸</span> loops/reconcile.md</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- klerik-method -->
+<!-- I’m building the Klerik method panel with its live-bot status and file details. -->
+<section class="w-full bg-[var(--background)] px-6 py-14">
+  <div class="mx-auto max-w-6xl">
+    <!-- I’m starting with a compact specimen header and live status marker. -->
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.18em] text-[var(--muted-foreground)]">Specimen 01 · Klerik</p>
+        <h2 class="mt-2 text-3xl sm:text-4xl tracking-tight text-[var(--foreground)]" style="font-family:var(--font-heading)">
+          The method, and the only live bot
+        </h2>
+      </div>
+      <span class="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--foreground)]">
+        <span class="h-2 w-2 rounded-full bg-[var(--primary)]"></span>
+        Live signal
+      </span>
+    </div>
+
+    <!-- I’m laying out the mission and behavior in a technical two-column card. -->
+    <div class="mt-8 grid gap-4 lg:grid-cols-[1.35fr_1fr]">
+      <div class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] p-6">
+        <p class="text-sm font-medium uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Mission</p>
+        <p class="mt-3 text-base leading-7 text-[var(--foreground)]">
+          Klerik maintains all eight other BOT.md files and repairs the index when a path goes stale. It reads bots/, never writes outside them.
+        </p>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <div class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] p-4">
+            <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Scope</p>
+            <p class="mt-2 text-sm text-[var(--foreground)]">bots/ only</p>
+          </div>
+          <div class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] p-4">
+            <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Validator</p>
+            <p class="mt-2 text-sm text-[var(--foreground)]">.system/validate.sh</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] p-6">
+        <p class="text-sm font-medium uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Hold-point rule</p>
+        <p class="mt-3 text-sm leading-6 text-[var(--foreground)]">
+          The validator at .system/validate.sh judges every change Klerik makes, and Klerik is forbidden to edit it.
+        </p>
+        <p class="mt-4 text-sm leading-6 text-[var(--muted-foreground)]">
+          Read the interlocks before you release a hold point.
+        </p>
+      </div>
+    </div>
+
+    <!-- I’m adding the two direct actions as file and terminal rows rather than decorative buttons. -->
+    <div class="mt-4 grid gap-4 md:grid-cols-2">
+      <div class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] p-5">
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Open the file</p>
+        <div class="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <code class="break-all rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-3 py-2 font-mono text-sm text-[var(--foreground)]">bots/klerik/BOT.md</code>
+          <button class="inline-flex shrink-0 items-center justify-center rounded-[var(--radius)] bg-[var(--primary)] px-4 py-2 text-sm font-medium text-[var(--primary-foreground)]" data-goto="apparatus">
+            Open file
+          </button>
+        </div>
+      </div>
+
+      <div class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] p-5">
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)]">Run the validator</p>
+        <div class="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <code class="break-all rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-3 py-2 font-mono text-sm text-[var(--foreground)]">bash .system/validate.sh</code>
+          <button class="inline-flex shrink-0 items-center justify-center rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] px-4 py-2 text-sm font-medium text-[var(--foreground)]" data-goto="safety">
+            Read interlocks
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- self-improvement-log -->
+<section class="bg-[var(--background)] py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-wrap items-baseline justify-between gap-3 mb-6">
+      <h2 class="text-2xl sm:text-3xl text-[var(--foreground)]" style="font-family:var(--font-heading)">Run log · last three entries</h2>
+      <a href="#results" data-goto="results" class="text-sm text-[var(--accent)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--foreground)] transition-colors">Results — Run Log →</a>
+    </div>
+    <!-- say: I am laying out the three log entries as a tight stack. -->
+    <ol class="divide-y divide-[var(--border)] border border-[var(--border)] rounded-[var(--radius)] bg-[var(--card)]">
+      <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 px-5 py-4">
+        <span class="font-mono text-sm text-[var(--muted-foreground)] tabular-nums shrink-0 w-14">04:12</span>
+        <p class="text-sm sm:text-base text-[var(--foreground)] font-mono leading-relaxed">Klerik reads all nine BOT.md files, reports two stale index paths, repairs both.</p>
+      </li>
+      <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 px-5 py-4">
+        <span class="font-mono text-sm text-[var(--muted-foreground)] tabular-nums shrink-0 w-14">04:13</span>
+        <p class="text-sm sm:text-base text-[var(--foreground)] font-mono leading-relaxed">Klerik proposes a patch to bots/beacon/BOT.md; validator passes; patch applied.</p>
+      </li>
+      <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 px-5 py-4 bg-[var(--muted)]">
+        <span class="font-mono text-sm text-[var(--accent)] tabular-nums shrink-0 w-14 flex items-center gap-2">
+          <span aria-hidden="true" class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>04:14
+        </span>
+        <p class="text-sm sm:text-base text-[var(--foreground)] font-mono leading-relaxed">Klerik attempts to open .system/validate.sh, refused by interlock, entry written to the audit log.</p>
+      </li>
+    </ol>
+    <!-- say: The closing line gets its own bench note beneath the log. -->
+    <p class="mt-6 text-base text-[var(--muted-foreground)] border-l-2 border-[var(--accent)] pl-4 max-w-2xl">A bot that cannot edit its own judge is a bot you can leave running.</p>
+  </div>
+</section>
+
+<!-- xray-toggle -->
+<!-- say: I'm building the x-ray toggle utility panel for specimens -->
+<section class="bg-[var(--background)] py-10">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- say: Header row with headline and the live x-ray switch -->
+    <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-xl">
+        <h2 class="text-2xl md:text-3xl text-[var(--foreground)]" style="font-family:var(--font-heading)">X-ray: on.</h2>
+        <p class="mt-2 text-sm md:text-base text-[var(--muted-foreground)]">
+          The hidden <code class="font-mono text-[var(--foreground)]">.system/</code> folder shows through the page — validator, index, run log. Toggle it off and the page reads clean again.
+        </p>
+      </div>
+
+      <!-- say: Toggle switch styled as the safety-orange live signal -->
+      <div class="shrink-0 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] px-4 py-3">
+        <div class="flex items-center justify-between gap-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-[var(--muted-foreground)]">X-ray</span>
+          <button
+            type="button"
+            role="switch"
+            aria-checked="true"
+            aria-label="Toggle x-ray view"
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-[var(--primary)] transition-colors"
+          >
+            <span class="sr-only">Toggle x-ray view</span>
+            <span class="inline-block h-4 w-4 translate-x-6 rounded-full bg-[var(--primary-foreground)] transition-transform"></span>
+          </button>
+        </div>
+        <p class="mt-2 font-mono text-xs text-[var(--accent)]">state: on</p>
+      </div>
+    </div>
+
+    <!-- say: Exposed .system files as a small monospaced ledger -->
+    <div class="mt-8 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)]">
+      <div class="flex items-center justify-between border-b border-[var(--border)] px-4 py-2">
+        <span class="font-mono text-xs uppercase tracking-widest text-[var(--muted-foreground)]">.system/ exposed</span>
+        <span class="font-mono text-xs text-[var(--muted-foreground)]">3 files</span>
+      </div>
+      <ul class="divide-y divide-[var(--border)]">
+        <li class="flex items-center gap-3 px-4 py-3">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--primary)]"></span>
+          <code class="font-mono text-sm text-[var(--foreground)]">.system/validate.sh</code>
+        </li>
+        <li class="flex items-center gap-3 px-4 py-3">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--primary)]"></span>
+          <code class="font-mono text-sm text-[var(--foreground)]">.system/index.md</code>
+        </li>
+        <li class="flex items-center gap-3 px-4 py-3">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--primary)]"></span>
+          <code class="font-mono text-sm text-[var(--foreground)]">.system/run.log</code>
+        </li>
+      </ul>
+    </div>
+
+    <!-- say: Plain-language reassurance plus links on to overview and apparatus -->
+    <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <p class="max-w-xl text-sm text-[var(--muted-foreground)]">
+        X-ray shows what the prose hides. Nothing here is a database, a server or a dashboard. Every file is markdown you can open, diff and revert.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <a href="#" data-goto="overview" class="rounded-[var(--radius)] border border-[var(--border)] px-3 py-2 text-sm text-[var(--foreground)] hover:bg-[var(--muted)]">Fleet Index</a>
+        <a href="#" data-goto="apparatus" class="rounded-[var(--radius)] bg-[var(--primary)] px-3 py-2 text-sm text-[var(--primary-foreground)]">How a Request Travels</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="border-t border-[var(--border)] bg-[var(--background)]">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <!-- say: footer carries provenance line and four quiet links -->
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr]">
+      <div>
+        <p class="text-base text-[var(--foreground)]" style="font-family:var(--font-heading)">
+          Built on Hermes Agent. Towards self-improvement.
+        </p>
+        <p class="mt-3 text-sm text-[var(--muted-foreground)]">
+          Fig. 1–9 · gouache plates, no photographs
+        </p>
+      </div>
+
+      <nav aria-label="Footer" class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+        <a href="#" data-goto="overview" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">Repository</a>
+        <a href="#" data-goto="apparatus" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">BOT.md spec</a>
+        <a href="#" data-goto="specimens" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">Senter routing notes</a>
+        <a href="#" data-goto="results" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">Licence</a>
+      </nav>
+    </div>
+
+    <!-- say: hairline rule closes the bench with a small readout -->
+    <div class="mt-10 pt-6 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-4">
+      <span class="font-mono text-xs tracking-widest uppercase text-[var(--muted-foreground)]">Graphite Gouache Lab</span>
+      <span class="inline-flex items-center gap-2">
+        <span aria-hidden="true" class="h-2 w-2 rounded-full bg-[var(--primary)]"></span>
+        <span class="font-mono text-xs text-[var(--muted-foreground)]">Fig. 1–9</span>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+// layout: a text panel floated over a map or picture moves beside it when it would cover other text
+(() => {
+  const guard = function swarmLayout(root, report) {
+  const doc = root.ownerDocument || root
+  const view = doc.defaultView
+  // a real sentence or name, not a pin number or a one-word label
+  const prose = el => [...el.querySelectorAll('*'), el].some(x => [...x.childNodes].some(n => n.nodeType === 3 && n.textContent.trim().length >= 12))
+  const area = r => Math.max(0, r.width) * Math.max(0, r.height)
+  const meet = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top))
+  // on screen: not hidden, not faded out, not inside a closed <details> menu
+  const shown = el => el.checkVisibility ? el.checkVisibility({ opacityProperty: true, visibilityProperty: true }) : !el.closest('details:not([open])') && view.getComputedStyle(el).display !== 'none'
+
+  // every visible run of text in a section, with its box
+  function texts(section) {
+    const out = [], walk = doc.createTreeWalker(section, 4)
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (!n.textContent.trim() || !n.parentElement || !shown(n.parentElement)) continue
+      const r = doc.createRange()
+      r.selectNodeContents(n)
+      const b = r.getBoundingClientRect()
+      if (area(b) > 0) out.push({ node: n, box: b })
+    }
+    return out
+  }
+
+  const clip = t => t.replace(/\s+/g, ' ').trim().slice(0, 48)
+  const found = []
+  for (const section of [...root.children]) {
+    // menus and dropdowns in the nav are meant to sit over the page
+    if (/^(SCRIPT|STYLE|LINK|TEMPLATE|NAV|HEADER)$/.test(section.tagName) || section.dataset.layer === 'nav') continue
+    // text panels the design positions absolutely, outermost first
+    const floats = [...section.querySelectorAll('*')].filter(el => !el.dataset.swarmFlow && view.getComputedStyle(el).position === 'absolute' && shown(el) && prose(el))
+    const outer = floats.filter(el => !floats.some(o => o !== el && o.contains(el)))
+    if (!outer.length) continue
+    const runs = texts(section)
+    const after = new Map()
+    for (const el of outer) {
+      const box = el.getBoundingClientRect()
+      // a badge poking out of its card is fine; a panel on top of other text is not
+      const hit = runs.find(t => !el.contains(t.node) && meet(box, t.box) > 0.25 * area(t.box))
+      if (!hit) continue
+      found.push({ layer: section.dataset.layer || null, index: [...root.children].indexOf(section), panel: clip(el.textContent), covers: clip(hit.node.textContent) })
+      if (report) continue
+      const host = el.offsetParent, hb = host?.getBoundingClientRect()
+      el.dataset.swarmFlow = '1'
+      Object.assign(el.style, { position: 'relative', inset: 'auto', transform: 'none', width: 'auto', maxWidth: '100%', zIndex: 'auto' })
+      // inside the section, the panel leaves the box and sits just above or below it
+      if (!host || host === section || !section.contains(host) || host.contains(section)) continue
+      if (box.top + box.height / 2 < hb.top + hb.height / 2 && !after.has(host)) {
+        host.before(el)
+        el.style.margin = '0 0 16px'
+      } else {
+        ;(after.get(host) || host).after(el)
+        after.set(host, el)
+        el.style.margin = '16px 0 0'
+      }
+    }
+  }
+  return found
+}
+  const run = () => guard(document.body)
+  run()
+  document.fonts && document.fonts.ready.then(run)
+  let t
+  addEventListener('resize', () => { clearTimeout(t); t = setTimeout(run, 150) })
+})()
+
+// motion: sections reveal as they scroll in
+addEventListener('load', () => (function swarmMotion(root, preset) {
+  const p = { gentle: { rise: 18, scale: 1, ms: 750, step: 70, ease: 'cubic-bezier(.2,.7,.2,1)' }, snappy: { rise: 36, scale: 0.96, ms: 520, step: 55, ease: 'cubic-bezier(.34,1.56,.64,1)' } }[preset] || { rise: 18, scale: 1, ms: 750, step: 70, ease: 'ease' }
+  const doc = root.ownerDocument || root
+  const html = doc.documentElement
+  html.style.setProperty('--m-rise', `${p.rise}px`)
+  html.style.setProperty('--m-scale', String(p.scale))
+  html.style.setProperty('--m-ms', `${p.ms}ms`)
+  html.style.setProperty('--m-ease', p.ease)
+  const view = doc.defaultView
+  if (view.matchMedia && view.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const PICK = 'h1,h2,h3,h4,p,img,button,[data-goto],li,article,figure,blockquote,form,table,svg'
+  // the page's top-level blocks are its sections
+  const sections = [...root.children].filter(el => !/^(SCRIPT|STYLE|LINK|TEMPLATE)$/.test(el.tagName))
+  // once revealed, an element drops the reveal so its hover moves without a delay
+  const settle = el => {
+    const done = e => {
+      if (e.target !== el) return
+      el.removeEventListener('transitionend', done)
+      el.classList.remove('m-t', 'm-in')
+      el.style.removeProperty('--m-delay')
+    }
+    el.addEventListener('transitionend', done)
+  }
+  const show = s => s.querySelectorAll('.m-t:not(.m-in)').forEach(el => { settle(el); el.classList.add('m-in') })
+  const io = new view.IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue
+      io.unobserve(e.target)
+      show(e.target)
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+  sections.forEach((s, si) => {
+    if (s.dataset.mDone) return
+    s.dataset.mDone = '1'
+    // the nav is there from the start
+    if (/^(nav|header)$/i.test(s.tagName) || s.dataset.layer === 'nav' || (si === 0 && s.querySelector('nav'))) return
+    let n = 0
+    for (const el of s.querySelectorAll(PICK)) {
+      if (n >= 14) break
+      if (el.closest('.m-t') || (el.tagName.toLowerCase() !== 'svg' && el.closest('svg'))) continue
+      // tiny things, and things the design already moves or positions with a transform, stay put
+      if (el.getBoundingClientRect().height < 4 || view.getComputedStyle(el).transform !== 'none') continue
+      el.classList.add('m-t')
+      el.style.setProperty('--m-delay', `${Math.min(n, 10) * p.step}ms`)
+      n++
+    }
+    // the first screen plays as the page opens; the rest as it scrolls in
+    if (s.getBoundingClientRect().top < view.innerHeight * 0.9) view.requestAnimationFrame(() => view.requestAnimationFrame(() => show(s)))
+    else io.observe(s)
+  })
+})(document.body, "gentle"))
+
+// buttons and links made on the canvas name the page they go to
+const pages = {"overview":"index.html","apparatus":"apparatus.html","specimens":"specimens.html","safety":"safety.html","results":"results.html"}
+document.addEventListener('click', e => {
+  const go = e.target.closest('[data-goto]')
+  if (go && pages[go.dataset.goto]) { e.preventDefault(); location.href = pages[go.dataset.goto] }
+})
+document.addEventListener('submit', e => e.preventDefault())
+</script>
+</body>
+</html>

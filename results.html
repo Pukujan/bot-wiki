@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Results and Quick Start — Bot Wiki</title>
+<!-- seo -->
+<meta name="description" content="The Bot Wiki results table: 69 tests passed, 9 bots, 28 skills, 12 loops, 0 problems, plus copyable quick-start commands and the repository tree.">
+<link rel="canonical" href="https://pukujan.github.io/bot-wiki/results.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bot Wiki">
+<meta property="og:title" content="Results and Quick Start — Bot Wiki">
+<meta property="og:description" content="The Bot Wiki results table: 69 tests passed, 9 bots, 28 skills, 12 loops, 0 problems, plus copyable quick-start commands and the repository tree.">
+<meta property="og:url" content="https://pukujan.github.io/bot-wiki/results.html">
+<meta property="og:image" content="https://pukujan.github.io/bot-wiki/img/share-2b4018e64d.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A technical lab bench seen from above with a bone-paper notebook, calipers, glass slides and a small orange tag">
+<meta property="og:image" content="https://pukujan.github.io/bot-wiki/img/share-2b4018e64d-sq.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Results and Quick Start — Bot Wiki">
+<meta name="twitter:description" content="The Bot Wiki results table: 69 tests passed, 9 bots, 28 skills, 12 loops, 0 problems, plus copyable quick-start commands and the repository tree.">
+<meta name="twitter:image" content="https://pukujan.github.io/bot-wiki/img/share-2b4018e64d.jpg">
+<meta name="twitter:image:alt" content="A technical lab bench seen from above with a bone-paper notebook, calipers, glass slides and a small orange tag">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FF5A1F">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Results and Quick Start — Bot Wiki","description":"The Bot Wiki results table: 69 tests passed, 9 bots, 28 skills, 12 loops, 0 problems, plus copyable quick-start commands and the repository tree.","url":"https://pukujan.github.io/bot-wiki/results.html","image":"https://pukujan.github.io/bot-wiki/img/share-2b4018e64d.jpg","isPartOf":{"@type":"WebSite","name":"Bot Wiki","url":"https://pukujan.github.io/bot-wiki/","inLanguage":"en"}}</script>
+<!-- /seo -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --background: #131210;
+  --foreground: #F2EDE2;
+  --primary: #FF5A1F;
+  --primary-foreground: #131210;
+  --muted: #1F1D19;
+  --muted-foreground: #9C9587;
+  --border: #332F28;
+  --accent: #E8DFC9;
+  --card: #1A1815;
+  --font-heading: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --radius: 8px;
+}
+html, body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); }
+
+[data-goto],button,a[href]{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+[data-goto]:hover,button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.m-t{opacity:0;transform:translateY(var(--m-rise)) scale(var(--m-scale));transition:opacity var(--m-ms) var(--m-ease),transform var(--m-ms) var(--m-ease);transition-delay:var(--m-delay,0ms)}
+img.m-t{transform:scale(1.06)}
+.m-t.m-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.m-t{opacity:1;transform:none;transition:none}[data-goto]:hover,button:hover{transform:none}}
+</style>
+</head>
+<body>
+<!-- navigation -->
+<!-- say: starting the shared navigation layer -->
+<nav class="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--background)]/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+
+    <!-- say: brand plus monospace build tag -->
+    <div class="flex items-center justify-between gap-4 sm:justify-start">
+      <a href="#" data-goto="overview" class="flex items-center gap-2.5 rounded-[var(--radius)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">
+        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] text-[var(--accent)]" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+            <rect x="4" y="8" width="16" height="11" rx="2"></rect>
+            <path d="M12 8V4"></path>
+            <circle cx="12" cy="3" r="1"></circle>
+            <path d="M9 13h.01M15 13h.01"></path>
+            <path d="M2 12v3M22 12v3"></path>
+          </svg>
+        </span>
+        <span class="text-base font-medium text-[var(--foreground)]" style="font-family:var(--font-heading)">Bot Wiki</span>
+        <span class="hidden whitespace-nowrap rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-1.5 py-0.5 font-mono text-[11px] tracking-tight text-[var(--muted-foreground)] sm:inline">v0.9.4</span>
+      </a>
+      <span class="whitespace-nowrap rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-1.5 py-0.5 font-mono text-[11px] tracking-tight text-[var(--muted-foreground)] sm:hidden">v0.9.4</span>
+    </div>
+
+    <!-- say: primary links as compact UI tabs -->
+    <ul class="flex flex-wrap items-center gap-x-1 gap-y-1 text-sm">
+      <li>
+        <a href="#" data-goto="overview" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Overview</a>
+      </li>
+      <li>
+        <a href="#" data-goto="apparatus" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Apparatus</a>
+      </li>
+      <li>
+        <a href="#" data-goto="specimens" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Specimens</a>
+      </li>
+      <li>
+        <a href="#" data-goto="safety" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Safety</a>
+      </li>
+      <li>
+        <a href="#" data-goto="results" class="block rounded-[var(--radius)] px-2.5 py-1.5 text-[var(--foreground)] transition-colors hover:bg-[var(--muted)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]">Results</a>
+      </li>
+    </ul>
+
+    <!-- say: single CTA back into the wiki -->
+    <a href="#" data-goto="overview" class="inline-flex items-center justify-center gap-2 self-start rounded-[var(--radius)] bg-[var(--primary)] px-4 py-2 text-sm font-medium text-[var(--primary-foreground)] transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] sm:self-auto">
+      Read the wiki
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+
+  </div>
+</nav>
+<!-- say: nav done — build tag, tabs, one CTA -->
+
+<!-- results-table -->
+<section class="bg-[var(--background)] text-[var(--foreground)]">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+    <div class="flex flex-col gap-3 border-b border-[var(--border)] pb-8">
+      <p class="font-mono text-xs uppercase tracking-[0.18em] text-[var(--muted-foreground)]">RUN LOG · FIG. 8 — RESULTS</p>
+      <h1 class="text-3xl md:text-4xl leading-tight" style="font-family:var(--font-heading)">Results table</h1>
+      <p class="text-sm md:text-base text-[var(--muted-foreground)] max-w-2xl">Table 1. Fleet verification, build v0.9.4. Counts taken from the validator run on the full repository.</p>
+    </div>
+
+    <!-- say: Laying out the verification table in a bordered panel. -->
+    <div class="mt-8 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] overflow-hidden">
+      <div class="flex items-center justify-between gap-4 px-5 py-3 border-b border-[var(--border)] bg-[var(--muted)]">
+        <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--muted-foreground)]">Table 1 · Fleet verification</span>
+        <span class="font-mono text-[11px] text-[var(--accent)]">build v0.9.4</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="border-b border-[var(--border)]">
+              <th scope="col" class="px-5 py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)] font-normal">Metric</th>
+              <th scope="col" class="px-5 py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)] font-normal text-right">Count</th>
+              <th scope="col" class="px-5 py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted-foreground)] font-normal">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[var(--border)]">
+              <td class="px-5 py-3">Tests passed</td>
+              <td class="px-5 py-3 text-right font-mono tabular-nums">69</td>
+              <td class="px-5 py-3 font-mono text-[var(--muted-foreground)]">tests/</td>
+            </tr>
+            <tr class="border-b border-[var(--border)]">
+              <td class="px-5 py-3">Bots</td>
+              <td class="px-5 py-3 text-right font-mono tabular-nums">9</td>
+              <td class="px-5 py-3 font-mono text-[var(--muted-foreground)]">bots/</td>
+            </tr>
+            <tr class="border-b border-[var(--border)]">
+              <td class="px-5 py-3">Skills</td>
+              <td class="px-5 py-3 text-right font-mono tabular-nums">28</td>
+              <td class="px-5 py-3 font-mono text-[var(--muted-foreground)]">skills/</td>
+            </tr>
+            <tr class="border-b border-[var(--border)]">
+              <td class="px-5 py-3">Loops</td>
+              <td class="px-5 py-3 text-right font-mono tabular-nums">12</td>
+              <td class="px-5 py-3 font-mono text-[var(--muted-foreground)]">loops/</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3">Problems</td>
+              <td class="px-5 py-3 text-right font-mono tabular-nums text-[var(--accent)]">0</td>
+              <td class="px-5 py-3 font-mono text-[var(--muted-foreground)]">validator</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- say: Adding footnote plus two cross-links to apparatus and specimens. -->
+    <div class="mt-6 flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+      <p class="text-xs md:text-sm text-[var(--muted-foreground)] max-w-xl leading-relaxed">
+        Every count is produced by the validator, not typed by hand. Re-run <code class="font-mono text-[var(--foreground)] bg-[var(--muted)] px-1.5 py-0.5 rounded-[var(--radius)]">make verify</code> to reproduce.
+      </p>
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <a href="#" data-goto="apparatus" class="inline-flex items-center gap-2 rounded-[var(--radius)] border border-[var(--border)] px-4 py-2 text-sm text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors">
+          How a request travels
+          <span aria-hidden="true" class="font-mono text-[var(--muted-foreground)]">→</span>
+        </a>
+        <a href="#" data-goto="specimens" class="inline-flex items-center gap-2 rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)] px-4 py-2 text-sm hover:opacity-90 transition-opacity">
+          Nine bots
+          <span aria-hidden="true" class="font-mono">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- test-readout -->
+<section id="results-test-readout" class="bg-[var(--background)] px-6 py-16">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+      <div>
+        <p class="text-[var(--accent)] text-xs tracking-[0.2em] uppercase mb-2">Test readout</p>
+        <h2 class="text-3xl sm:text-4xl leading-tight text-[var(--foreground)]" style="font-family:var(--font-heading)">Every counter lands where it should</h2>
+      </div>
+      <a href="#safety" data-goto="safety" class="inline-flex items-center gap-2 text-sm text-[var(--muted-foreground)] hover:text-[var(--accent)] transition-colors border border-[var(--border)] rounded-[var(--radius)] px-4 py-2">Safety interlocks <span aria-hidden="true">→</span></a>
+    </div>
+
+    <!-- say: Panel of five counters, each in its own hairline cell. -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-6 sm:p-8">
+      <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-[var(--border)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden">
+        <div class="bg-[var(--card)] px-5 py-6">
+          <dt class="text-[10px] tracking-[0.18em] uppercase text-[var(--muted-foreground)] mb-3" style="font-family:var(--font-body)">Tests</dt>
+          <dd class="text-2xl sm:text-3xl text-[var(--foreground)] tabular-nums" style="font-family:var(--font-heading)">69 / 69 <span class="text-sm text-[var(--muted-foreground)]">pass</span></dd>
+        </div>
+        <div class="bg-[var(--card)] px-5 py-6">
+          <dt class="text-[10px] tracking-[0.18em] uppercase text-[var(--muted-foreground)] mb-3">Bots</dt>
+          <dd class="text-2xl sm:text-3xl text-[var(--foreground)] tabular-nums" style="font-family:var(--font-heading)">9</dd>
+        </div>
+        <div class="bg-[var(--card)] px-5 py-6">
+          <dt class="text-[10px] tracking-[0.18em] uppercase text-[var(--muted-foreground)] mb-3">Skills</dt>
+          <dd class="text-2xl sm:text-3xl text-[var(--foreground)] tabular-nums" style="font-family:var(--font-heading)">28</dd>
+        </div>
+        <div class="bg-[var(--card)] px-5 py-6">
+          <dt class="text-[10px] tracking-[0.18em] uppercase text-[var(--muted-foreground)] mb-3">Loops</dt>
+          <dd class="text-2xl sm:text-3xl text-[var(--foreground)] tabular-nums" style="font-family:var(--font-heading)">12</dd>
+        </div>
+        <div class="bg-[var(--card)] px-5 py-6">
+          <dt class="text-[10px] tracking-[0.18em] uppercase text-[var(--muted-foreground)] mb-3">Problems</dt>
+          <dd class="text-2xl sm:text-3xl text-[var(--accent)] tabular-nums" style="font-family:var(--font-heading)">0</dd>
+        </div>
+      </dl>
+
+      <!-- say: Status strip closes the panel with the validator version. -->
+      <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-[var(--muted-foreground)]">
+        <span class="inline-flex items-center gap-2 bg-[var(--muted)] border border-[var(--border)] rounded-[var(--radius)] px-3 py-1.5 text-[var(--foreground)]">
+          <span class="inline-block w-2 h-2 rounded-full bg-[var(--accent)]" aria-hidden="true"></span>
+          Status
+        </span>
+        <span style="font-family:var(--font-body)">Validator clean at v0.9.4</span>
+      </div>
+    </div>
+
+    <p class="mt-6 max-w-2xl text-sm leading-relaxed text-[var(--muted-foreground)]">Counters tick once to their final value when the panel enters the view; with reduced motion they render at rest.</p>
+  </div>
+</section>
+
+<!-- quick-start-terminal -->
+<section class="bg-[var(--background)] px-6 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div>
+        <p class="text-xs uppercase tracking-[0.18em] text-[var(--muted-foreground)] mb-2" style="font-family:var(--font-body)">Quick Start</p>
+        <h2 class="text-3xl md:text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">Four commands to a running fleet.</h2>
+      </div>
+      <p class="text-sm text-[var(--muted-foreground)] max-w-xs md:text-right">Copy the block, or copy a single line.</p>
+    </div>
+
+    <!-- say: Building the copyable terminal panel with four commands. -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] overflow-hidden">
+        <div class="flex items-center justify-between gap-3 border-b border-[var(--border)] px-4 py-3 bg-[var(--muted)]">
+          <div class="flex items-center gap-2">
+            <span class="inline-block h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+            <span class="text-xs uppercase tracking-[0.16em] text-[var(--muted-foreground)] font-mono">terminal — bash</span>
+          </div>
+          <button type="button" class="text-xs font-mono uppercase tracking-[0.12em] px-3 py-1.5 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Copy block</button>
+        </div>
+
+        <ol class="divide-y divide-[var(--border)]">
+          <li class="group flex items-center gap-3 px-4 py-3.5 hover:bg-[var(--muted)] transition-colors">
+            <span class="font-mono text-xs text-[var(--muted-foreground)] w-5 shrink-0 select-none">1</span>
+            <code class="flex-1 font-mono text-sm text-[var(--foreground)] break-all">git clone https://github.com/SouthpawIN/bot-wiki.git</code>
+            <button type="button" aria-label="Copy line 1" class="shrink-0 text-[10px] font-mono uppercase tracking-[0.12em] px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">Copy</button>
+          </li>
+          <li class="group flex items-center gap-3 px-4 py-3.5 hover:bg-[var(--muted)] transition-colors">
+            <span class="font-mono text-xs text-[var(--muted-foreground)] w-5 shrink-0 select-none">2</span>
+            <code class="flex-1 font-mono text-sm text-[var(--foreground)] break-all">cd bot-wiki</code>
+            <button type="button" aria-label="Copy line 2" class="shrink-0 text-[10px] font-mono uppercase tracking-[0.12em] px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">Copy</button>
+          </li>
+          <li class="group flex items-center gap-3 px-4 py-3.5 hover:bg-[var(--muted)] transition-colors">
+            <span class="font-mono text-xs text-[var(--muted-foreground)] w-5 shrink-0 select-none">3</span>
+            <code class="flex-1 font-mono text-sm text-[var(--foreground)] break-all">make install</code>
+            <button type="button" aria-label="Copy line 3" class="shrink-0 text-[10px] font-mono uppercase tracking-[0.12em] px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">Copy</button>
+          </li>
+          <li class="group flex items-center gap-3 px-4 py-3.5 hover:bg-[var(--muted)] transition-colors">
+            <span class="font-mono text-xs text-[var(--muted-foreground)] w-5 shrink-0 select-none">4</span>
+            <code class="flex-1 font-mono text-sm text-[var(--foreground)] break-all">make verify</code>
+            <button type="button" aria-label="Copy line 4" class="shrink-0 text-[10px] font-mono uppercase tracking-[0.12em] px-2 py-1 rounded-[var(--radius)] border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">Copy</button>
+          </li>
+        </ol>
+      </div>
+
+      <!-- say: Side note explains the mission edit and links onward. -->
+      <aside class="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] p-5 flex flex-col">
+        <p class="text-xs uppercase tracking-[0.16em] text-[var(--muted-foreground)] font-mono mb-3">Next step</p>
+        <p class="text-sm text-[var(--foreground)] leading-relaxed">
+          Then open <code class="font-mono text-[var(--accent)]">bots/klerik/BOT.md</code> and edit the mission line. The system picks it up on the next loop.
+        </p>
+        <div class="mt-5 pt-4 border-t border-[var(--border)]">
+          <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">Full request path: see Apparatus.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <button type="button" data-goto="apparatus" class="text-xs font-mono uppercase tracking-[0.12em] px-3 py-2 rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition-opacity">Apparatus →</button>
+            <button type="button" data-goto="overview" class="text-xs font-mono uppercase tracking-[0.12em] px-3 py-2 rounded-[var(--radius)] border border-[var(--border)] text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">Fleet Index</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- file-manifest -->
+<section class="bg-[var(--background)] py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 border-b border-[var(--border)] pb-6">
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted-foreground)]" style="font-family:var(--font-body)">Manifest</p>
+        <h2 class="mt-2 text-3xl sm:text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">FILE MANIFEST</h2>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="#" data-goto="apparatus" class="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-[var(--radius)] bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 transition-opacity" style="font-family:var(--font-body)">Open apparatus</a>
+        <a href="#" data-goto="safety" class="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-[var(--radius)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors" style="font-family:var(--font-body)">Safety interlocks</a>
+      </div>
+    </div>
+
+    <!-- say: Requirements go in a compact readout strip, not a paragraph. -->
+    <div class="mt-8 grid gap-px bg-[var(--border)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden sm:grid-cols-2">
+      <div class="bg-[var(--card)] p-5">
+        <p class="text-xs uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Requirements</p>
+        <p class="mt-2 text-sm text-[var(--foreground)]">Node 20 or newer, git, and a Hermes Agent runtime. No database, no dashboard.</p>
+      </div>
+      <div class="bg-[var(--card)] p-5 sm:border-l border-[var(--border)]">
+        <p class="text-xs uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Read policy</p>
+        <p class="mt-2 text-sm text-[var(--foreground)]">Paths in bots/ and skills/ are read directly from disk. .system/ is read-only to every bot.</p>
+      </div>
+    </div>
+
+    <!-- say: The repository tree sits in a monospace card in normal flow. -->
+    <div class="mt-8 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] overflow-hidden">
+      <div class="flex items-center justify-between gap-4 px-5 py-3 border-b border-[var(--border)]">
+        <p class="text-xs uppercase tracking-[0.15em] text-[var(--muted-foreground)]">Repository tree</p>
+        <span class="text-xs text-[var(--accent)]" style="font-family:var(--font-body)">read-only · .system/</span>
+      </div>
+      <pre class="px-5 py-5 overflow-x-auto text-sm leading-7 text-[var(--foreground)]" style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace"><code>bot-wiki/
+├── bots/
+│   └── &lt;slug&gt;/BOT.md
+├── skills/&lt;name&gt;/SKILL.md
+├── loops/&lt;name&gt;.md
+├── .system/
+│   └── validator/
+├── tests/
+└── Makefile</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- self-improvement-log -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <!-- say: starting the self-improvement log panel with a header -->
+  <div class="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--border)] pb-4">
+    <div>
+      <h2 class="text-2xl md:text-3xl tracking-tight text-[var(--foreground)]" style="font-family:var(--font-heading)">SELF-IMPROVEMENT LOG</h2>
+      <p class="mt-1 text-sm text-[var(--muted-foreground)]">Entries written by Klerik, timestamped at each run.</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="inline-flex items-center gap-1.5 text-xs font-mono text-[var(--muted-foreground)]">
+        <span class="inline-block h-1.5 w-1.5 rounded-full bg-[var(--accent)]"></span>
+        5 stages
+      </span>
+      <a href="#" data-goto="safety" class="text-xs font-mono px-3 py-1.5 rounded-[var(--radius)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors">Hold points</a>
+    </div>
+  </div>
+
+  <!-- say: log entries as a structured list of stages -->
+  <ol class="mt-6 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] divide-y divide-[var(--border)]">
+    <li class="grid grid-cols-1 sm:grid-cols-[11rem_5.5rem_1fr] gap-2 sm:gap-4 px-4 sm:px-5 py-4">
+      <span class="font-mono text-xs text-[var(--muted-foreground)] sm:pt-0.5">2025-11-04T02:10</span>
+      <span class="inline-flex w-fit items-center rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-2 py-0.5 text-[11px] font-mono tracking-wider text-[var(--foreground)]">READ</span>
+      <p class="text-sm text-[var(--foreground)]">9 BOT.md files parsed, 0 malformed.</p>
+    </li>
+    <li class="grid grid-cols-1 sm:grid-cols-[11rem_5.5rem_1fr] gap-2 sm:gap-4 px-4 sm:px-5 py-4">
+      <span class="font-mono text-xs text-[var(--muted-foreground)] sm:pt-0.5">2025-11-04T02:11</span>
+      <span class="inline-flex w-fit items-center rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-2 py-0.5 text-[11px] font-mono tracking-wider text-[var(--foreground)]">REPAIR</span>
+      <p class="text-sm text-[var(--foreground)]">index rebuilt from bots/, 9 entries restored.</p>
+    </li>
+    <!-- say: hold entry marked with the safety-orange signal -->
+    <li class="grid grid-cols-1 sm:grid-cols-[11rem_5.5rem_1fr] gap-2 sm:gap-4 px-4 sm:px-5 py-4 bg-[var(--muted)]/40">
+      <span class="font-mono text-xs text-[var(--muted-foreground)] sm:pt-0.5">2025-11-04T02:11</span>
+      <span class="inline-flex w-fit items-center rounded-[var(--radius)] border border-[var(--accent)] px-2 py-0.5 text-[11px] font-mono tracking-wider text-[var(--accent)]">HOLD</span>
+      <p class="text-sm text-[var(--foreground)]">attempted edit to .system/validator refused. Klerik cannot edit its own judge.</p>
+    </li>
+    <li class="grid grid-cols-1 sm:grid-cols-[11rem_5.5rem_1fr] gap-2 sm:gap-4 px-4 sm:px-5 py-4">
+      <span class="font-mono text-xs text-[var(--muted-foreground)] sm:pt-0.5">2025-11-04T02:12</span>
+      <span class="inline-flex w-fit items-center rounded-[var(--radius)] border border-[var(--border)] bg-[var(--muted)] px-2 py-0.5 text-[11px] font-mono tracking-wider text-[var(--foreground)]">VERIFY</span>
+      <p class="text-sm text-[var(--foreground)]">69 tests passed, 0 problems.</p>
+    </li>
+  </ol>
+
+  <!-- say: closing note linking to specimens -->
+  <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+    <p class="text-xs font-mono text-[var(--muted-foreground)]">Klerik · validator locked</p>
+    <a href="#" data-goto="specimens" class="text-sm text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:decoration-[var(--accent)]">Browse the nine specimens</a>
+  </div>
+</section>
+
+<!-- faq -->
+<!-- I'll build the results page FAQ as a bench questions panel. -->
+<section class="bg-[var(--background)] py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Panel header with small label and heading -->
+    <div class="flex flex-col gap-3 border-b border-[var(--border)] pb-6">
+      <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent)]">Questions from the bench</span>
+      <h2 class="text-2xl md:text-4xl text-[var(--foreground)]" style="font-family:var(--font-heading)">Questions from the Bench</h2>
+    </div>
+
+    <!-- Grid of question cards, two columns on desktop -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8">
+
+      <!-- Q1 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5 md:p-6">
+        <div class="flex items-start gap-3">
+          <span class="font-mono text-xs text-[var(--muted-foreground)] pt-1 shrink-0">01</span>
+          <div>
+            <h3 class="text-base font-semibold text-[var(--foreground)]" style="font-family:var(--font-heading)">What is Bot Wiki built on?</h3>
+            <p class="mt-2 text-sm md:text-base text-[var(--muted-foreground)]">Hermes Agent by Nous Research.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5 md:p-6">
+        <div class="flex items-start gap-3">
+          <span class="font-mono text-xs text-[var(--muted-foreground)] pt-1 shrink-0">02</span>
+          <div>
+            <h3 class="text-base font-semibold text-[var(--foreground)]" style="font-family:var(--font-heading)">Do I need a database?</h3>
+            <p class="mt-2 text-sm md:text-base text-[var(--muted-foreground)]">No. Every bot is one folder of markdown; the wiki is the file tree.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- I'm keeping the spacing and mono index consistent across cards. -->
+
+      <!-- Q3 with link to specimens -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5 md:p-6">
+        <div class="flex items-start gap-3">
+          <span class="font-mono text-xs text-[var(--muted-foreground)] pt-1 shrink-0">03</span>
+          <div>
+            <h3 class="text-base font-semibold text-[var(--foreground)]" style="font-family:var(--font-heading)">Which bots are live?</h3>
+            <p class="mt-2 text-sm md:text-base text-[var(--muted-foreground)]">
+              Klerik is live. The other eight are seeding, paused or blocked — see
+              <a href="#" data-goto="specimens" class="text-[var(--accent)] underline underline-offset-2 hover:opacity-80">Specimens</a>
+              for each status.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 with link to safety -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-5 md:p-6">
+        <div class="flex items-start gap-3">
+          <span class="font-mono text-xs text-[var(--muted-foreground)] pt-1 shrink-0">04</span>
+          <div>
+            <h3 class="text-base font-semibold text-[var(--foreground)]" style="font-family:var(--font-heading)">Can a bot edit the validator that judges it?</h3>
+            <p class="mt-2 text-sm md:text-base text-[var(--muted-foreground)]">
+              No. Klerik maintains every other bot and is refused any write to <code class="font-mono text-xs bg-[var(--muted)] text-[var(--foreground)] px-1.5 py-0.5 rounded-[var(--radius)]">.system/</code>.
+              See <a href="#" data-goto="safety" class="text-[var(--accent)] underline underline-offset-2 hover:opacity-80">Safety Interlocks</a> for the hold points.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer note linking across to safety for the interlock detail. -->
+    <p class="mt-8 font-mono text-xs text-[var(--muted-foreground)]">
+      Read the full interlock sequence on the <a href="#" data-goto="safety" class="text-[var(--accent)] underline underline-offset-2 hover:opacity-80">Safety Interlocks</a> page.
+    </p>
+
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="border-t border-[var(--border)] bg-[var(--background)]">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <!-- say: footer carries provenance line and four quiet links -->
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr]">
+      <div>
+        <p class="text-base text-[var(--foreground)]" style="font-family:var(--font-heading)">
+          Built on Hermes Agent. Towards self-improvement.
+        </p>
+        <p class="mt-3 text-sm text-[var(--muted-foreground)]">
+          Fig. 1–9 · gouache plates, no photographs
+        </p>
+      </div>
+
+      <nav aria-label="Footer" class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+        <a href="#" data-goto="overview" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">Repository</a>
+        <a href="#" data-goto="apparatus" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">BOT.md spec</a>
+        <a href="#" data-goto="specimens" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">Senter routing notes</a>
+        <a href="#" data-goto="results" class="text-[var(--foreground)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--accent)]">Licence</a>
+      </nav>
+    </div>
+
+    <!-- say: hairline rule closes the bench with a small readout -->
+    <div class="mt-10 pt-6 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-4">
+      <span class="font-mono text-xs tracking-widest uppercase text-[var(--muted-foreground)]">Graphite Gouache Lab</span>
+      <span class="inline-flex items-center gap-2">
+        <span aria-hidden="true" class="h-2 w-2 rounded-full bg-[var(--primary)]"></span>
+        <span class="font-mono text-xs text-[var(--muted-foreground)]">Fig. 1–9</span>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+// layout: a text panel floated over a map or picture moves beside it when it would cover other text
+(() => {
+  const guard = function swarmLayout(root, report) {
+  const doc = root.ownerDocument || root
+  const view = doc.defaultView
+  // a real sentence or name, not a pin number or a one-word label
+  const prose = el => [...el.querySelectorAll('*'), el].some(x => [...x.childNodes].some(n => n.nodeType === 3 && n.textContent.trim().length >= 12))
+  const area = r => Math.max(0, r.width) * Math.max(0, r.height)
+  const meet = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top))
+  // on screen: not hidden, not faded out, not inside a closed <details> menu
+  const shown = el => el.checkVisibility ? el.checkVisibility({ opacityProperty: true, visibilityProperty: true }) : !el.closest('details:not([open])') && view.getComputedStyle(el).display !== 'none'
+
+  // every visible run of text in a section, with its box
+  function texts(section) {
+    const out = [], walk = doc.createTreeWalker(section, 4)
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (!n.textContent.trim() || !n.parentElement || !shown(n.parentElement)) continue
+      const r = doc.createRange()
+      r.selectNodeContents(n)
+      const b = r.getBoundingClientRect()
+      if (area(b) > 0) out.push({ node: n, box: b })
+    }
+    return out
+  }
+
+  const clip = t => t.replace(/\s+/g, ' ').trim().slice(0, 48)
+  const found = []
+  for (const section of [...root.children]) {
+    // menus and dropdowns in the nav are meant to sit over the page
+    if (/^(SCRIPT|STYLE|LINK|TEMPLATE|NAV|HEADER)$/.test(section.tagName) || section.dataset.layer === 'nav') continue
+    // text panels the design positions absolutely, outermost first
+    const floats = [...section.querySelectorAll('*')].filter(el => !el.dataset.swarmFlow && view.getComputedStyle(el).position === 'absolute' && shown(el) && prose(el))
+    const outer = floats.filter(el => !floats.some(o => o !== el && o.contains(el)))
+    if (!outer.length) continue
+    const runs = texts(section)
+    const after = new Map()
+    for (const el of outer) {
+      const box = el.getBoundingClientRect()
+      // a badge poking out of its card is fine; a panel on top of other text is not
+      const hit = runs.find(t => !el.contains(t.node) && meet(box, t.box) > 0.25 * area(t.box))
+      if (!hit) continue
+      found.push({ layer: section.dataset.layer || null, index: [...root.children].indexOf(section), panel: clip(el.textContent), covers: clip(hit.node.textContent) })
+      if (report) continue
+      const host = el.offsetParent, hb = host?.getBoundingClientRect()
+      el.dataset.swarmFlow = '1'
+      Object.assign(el.style, { position: 'relative', inset: 'auto', transform: 'none', width: 'auto', maxWidth: '100%', zIndex: 'auto' })
+      // inside the section, the panel leaves the box and sits just above or below it
+      if (!host || host === section || !section.contains(host) || host.contains(section)) continue
+      if (box.top + box.height / 2 < hb.top + hb.height / 2 && !after.has(host)) {
+        host.before(el)
+        el.style.margin = '0 0 16px'
+      } else {
+        ;(after.get(host) || host).after(el)
+        after.set(host, el)
+        el.style.margin = '16px 0 0'
+      }
+    }
+  }
+  return found
+}
+  const run = () => guard(document.body)
+  run()
+  document.fonts && document.fonts.ready.then(run)
+  let t
+  addEventListener('resize', () => { clearTimeout(t); t = setTimeout(run, 150) })
+})()
+
+// motion: sections reveal as they scroll in
+addEventListener('load', () => (function swarmMotion(root, preset) {
+  const p = { gentle: { rise: 18, scale: 1, ms: 750, step: 70, ease: 'cubic-bezier(.2,.7,.2,1)' }, snappy: { rise: 36, scale: 0.96, ms: 520, step: 55, ease: 'cubic-bezier(.34,1.56,.64,1)' } }[preset] || { rise: 18, scale: 1, ms: 750, step: 70, ease: 'ease' }
+  const doc = root.ownerDocument || root
+  const html = doc.documentElement
+  html.style.setProperty('--m-rise', `${p.rise}px`)
+  html.style.setProperty('--m-scale', String(p.scale))
+  html.style.setProperty('--m-ms', `${p.ms}ms`)
+  html.style.setProperty('--m-ease', p.ease)
+  const view = doc.defaultView
+  if (view.matchMedia && view.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const PICK = 'h1,h2,h3,h4,p,img,button,[data-goto],li,article,figure,blockquote,form,table,svg'
+  // the page's top-level blocks are its sections
+  const sections = [...root.children].filter(el => !/^(SCRIPT|STYLE|LINK|TEMPLATE)$/.test(el.tagName))
+  // once revealed, an element drops the reveal so its hover moves without a delay
+  const settle = el => {
+    const done = e => {
+      if (e.target !== el) return
+      el.removeEventListener('transitionend', done)
+      el.classList.remove('m-t', 'm-in')
+      el.style.removeProperty('--m-delay')
+    }
+    el.addEventListener('transitionend', done)
+  }
+  const show = s => s.querySelectorAll('.m-t:not(.m-in)').forEach(el => { settle(el); el.classList.add('m-in') })
+  const io = new view.IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue
+      io.unobserve(e.target)
+      show(e.target)
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+  sections.forEach((s, si) => {
+    if (s.dataset.mDone) return
+    s.dataset.mDone = '1'
+    // the nav is there from the start
+    if (/^(nav|header)$/i.test(s.tagName) || s.dataset.layer === 'nav' || (si === 0 && s.querySelector('nav'))) return
+    let n = 0
+    for (const el of s.querySelectorAll(PICK)) {
+      if (n >= 14) break
+      if (el.closest('.m-t') || (el.tagName.toLowerCase() !== 'svg' && el.closest('svg'))) continue
+      // tiny things, and things the design already moves or positions with a transform, stay put
+      if (el.getBoundingClientRect().height < 4 || view.getComputedStyle(el).transform !== 'none') continue
+      el.classList.add('m-t')
+      el.style.setProperty('--m-delay', `${Math.min(n, 10) * p.step}ms`)
+      n++
+    }
+    // the first screen plays as the page opens; the rest as it scrolls in
+    if (s.getBoundingClientRect().top < view.innerHeight * 0.9) view.requestAnimationFrame(() => view.requestAnimationFrame(() => show(s)))
+    else io.observe(s)
+  })
+})(document.body, "gentle"))
+
+// buttons and links made on the canvas name the page they go to
+const pages = {"overview":"index.html","apparatus":"apparatus.html","specimens":"specimens.html","safety":"safety.html","results":"results.html"}
+document.addEventListener('click', e => {
+  const go = e.target.closest('[data-goto]')
+  if (go && pages[go.dataset.goto]) { e.preventDefault(); location.href = pages[go.dataset.goto] }
+})
+document.addEventListener('submit', e => e.preventDefault())
+</script>
+</body>
+</html>
